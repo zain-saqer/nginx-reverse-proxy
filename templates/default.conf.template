@@ -1,0 +1,15 @@
+server {
+    listen 80;
+    server_name ${HOST1};
+    location / {
+        proxy_pass http://host.docker.internal:${PORT1};
+    }
+}
+
+server {
+    listen 80;
+    server_name ${HOST2};
+    location / {
+        proxy_pass http://host.docker.internal:${PORT2};
+    }
+}

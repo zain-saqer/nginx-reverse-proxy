@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  reverse-proxy:
+    image: nginx
+    volumes:
+      - ./templates:/etc/nginx/templates
+    ports:
+      - "80:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      HOST1: ${HOST1:?}
+      PORT1: ${PORT1:?}
+      HOST2: ${HOST2:?}
+      PORT2: ${PORT2:?}
