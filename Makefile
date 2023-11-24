@@ -8,5 +8,5 @@ up:
 down:
 	@docker stack down reverse-proxy
 
-app-service-logs:
-	@docker service logs reverse-proxy
+logs:
+	@docker service logs reverse-proxy_nginx
