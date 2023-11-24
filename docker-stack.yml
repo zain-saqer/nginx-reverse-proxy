@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  reverse-proxy:
+  nginx:
     image: nginx
     volumes:
       - ./templates:/etc/nginx/templates
